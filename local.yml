@@ -1,0 +1,14 @@
+---
+- name: Local machine setup
+  hosts: localhost
+  connection: local
+  become: false
+
+  roles:
+    - common
+    - role: macos
+      when: ansible_os_family == "Darwin"
+    - role: arch
+      when: ansible_distribution == "Archlinux"
+    - role: debian
+      when: ansible_os_family == "Debian"
