@@ -30,6 +30,8 @@ if ! command -v pipx &>/dev/null; then
   pipx ensurepath
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
+
 if ! command -v ansible &>/dev/null; then
   echo "Installing Ansible..."
   pipx install --include-deps ansible
