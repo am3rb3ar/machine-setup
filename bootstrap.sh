@@ -46,13 +46,13 @@ fi
 
 if ! command -v ansible-galaxy &>/dev/null; then
   echo "Installing Ansible collections..."
-  ansible-galaxy -vv collection install community.general
+  ansible-galaxy -vvv collection install community.general
 fi
 
 if $DRY_RUN; then
   echo "Running ansible-pull (dry run)..."
-  ansible-pull -vv --check --diff -U "$REPO_URL" "$PLAYBOOK"
+  ansible-pull -vvv --check --diff -U "$REPO_URL" "$PLAYBOOK"
 else
   echo "Running ansible-pull..."
-  ansible-pull -vv -U "$REPO_URL" "$PLAYBOOK"
+  ansible-pull -vvv -U "$REPO_URL" "$PLAYBOOK"
 fi
