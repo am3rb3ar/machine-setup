@@ -1,6 +1,7 @@
 ---
 homebrew_taps:
   - "cloudsmith-io/cloudsmith-cli"
+  - "derailed/k9s"
   - "jesseduffield/lazydocker"
   - "jesseduffield/lazygit"
   - "warrensbox/tap"
@@ -31,6 +32,7 @@ homebrew_packages:
   - "jq"
   - "jqp"
   - "just"
+  - "k9s"
   - "kubecm"
   - "kubernetes-cli"
   - "lazydocker" 
