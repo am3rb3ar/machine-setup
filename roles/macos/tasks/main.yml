@@ -24,14 +24,6 @@
     state: present
   when: homebrew_packages | length > 0
 
-- name: Allow passwordless installer for Homebrew casks
-  ansible.builtin.copy:
-    content: "{{ ansible_user_id }} ALL=(root) NOPASSWD: /usr/sbin/installer\n"
-    dest: /etc/sudoers.d/homebrew-installer
-    mode: '0440'
-    validate: visudo -cf %s
-  become: true
-
 - name: Install Homebrew casks
   community.general.homebrew_cask:
     name: "{{ homebrew_casks }}"
