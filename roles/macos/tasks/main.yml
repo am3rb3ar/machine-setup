@@ -28,6 +28,7 @@
   community.general.homebrew_cask:
     name: "{{ homebrew_casks }}"
     state: present
+  become: true
   when: homebrew_casks | length > 0
 
 - name: Install Homebrew fonts

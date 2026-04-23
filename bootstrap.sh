@@ -45,5 +45,5 @@ if $DRY_RUN; then
   ansible-pull -vv --check --diff -U "$REPO_URL" "$PLAYBOOK"
 else
   echo "Running ansible-pull..."
-  ansible-pull -vv -U "$REPO_URL" "$PLAYBOOK"
+  ansible-pull -vv -K -U "$REPO_URL" "$PLAYBOOK"
 fi
