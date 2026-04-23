@@ -64,9 +64,11 @@ homebrew_casks:
   - "betterdisplay"
   - "ghostty"
   - "iterm2"
-  - "karabiner-elements"
   - "kitty"
   - "obsidian"
+
+# Requires manual install + system extension approval in System Settings
+# brew install --cask karabiner-elements
 
 macos_dock_defaults:
   - { domain: com.apple.dock, key: autohide,                type: bool,    value: true }
