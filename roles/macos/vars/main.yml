@@ -61,6 +61,8 @@ homebrew_packages:
   - "zoxide"
 
 homebrew_casks:
+  - "1password"
+  - "1password-cli"
   - "aerospace"
   - "betterdisplay"
   - "ghostty"
