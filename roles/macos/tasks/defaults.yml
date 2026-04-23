@@ -1,0 +1,17 @@
+---
+- name: Apply Dock settings
+  community.general.osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  loop: "{{ macos_dock_defaults }}"
+  notify: Restart Dock
+
+- name: Apply keyboard settings
+  community.general.osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  loop: "{{ macos_keyboard_defaults }}"
