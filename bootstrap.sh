@@ -21,6 +21,13 @@ done
 if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  if ! grep -q 'brew shellenv' ~/.zprofile 2>/dev/null; then
+    echo >> ~/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  fi
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
