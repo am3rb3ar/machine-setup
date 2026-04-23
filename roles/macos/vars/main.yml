@@ -80,14 +80,15 @@ macos_dock_defaults:
   - { domain: com.apple.dock, key: orientation,             type: string,  value: bottom }
 
 macos_keyboard_defaults:
-  - { domain: NSGlobalDomain, key: KeyRepeat,                             type: float, value: 2 }
-  - { domain: NSGlobalDomain, key: InitialKeyRepeat,                      type: float, value: 15 }
-  - { domain: NSGlobalDomain, key: ApplePressAndHoldEnabled,              type: bool, value: false }
-  - { domain: NSGlobalDomain, key: NSAutomaticQuoteSubstitutionEnabled,   type: bool, value: false }
-  - { domain: NSGlobalDomain, key: NSAutomaticDashSubstitutionEnabled,    type: bool, value: false }
-  - { domain: NSGlobalDomain, key: NSAutomaticCapitalizationEnabled,      type: bool, value: false }
-  - { domain: NSGlobalDomain, key: NSAutomaticSpellingCorrectionEnabled,    type: bool, value: false }
-  - { domain: NSGlobalDomain, key: WebAutomaticSpellingCorrectionEnabled,  type: bool, value: false }
+  - { domain: NSGlobalDomain,        key: KeyRepeat,                             type: float,  value: 2 }
+  - { domain: NSGlobalDomain,        key: InitialKeyRepeat,                      type: float,  value: 15 }
+  - { domain: NSGlobalDomain,        key: ApplePressAndHoldEnabled,              type: bool,   value: false }
+  - { domain: NSGlobalDomain,        key: NSAutomaticQuoteSubstitutionEnabled,   type: bool,   value: false }
+  - { domain: NSGlobalDomain,        key: NSAutomaticDashSubstitutionEnabled,    type: bool,   value: false }
+  - { domain: NSGlobalDomain,        key: NSAutomaticCapitalizationEnabled,      type: bool,   value: false }
+  - { domain: NSGlobalDomain,        key: NSAutomaticSpellingCorrectionEnabled,  type: bool,   value: false }
+  - { domain: NSGlobalDomain,        key: WebAutomaticSpellingCorrectionEnabled, type: bool,   value: false }
+  - { domain: com.apple.HIToolbox,   key: AppleCurrentKeyboardLayoutInputSourceID, type: string, value: "com.apple.keylayout.Dvorak" }
 
 homebrew_fonts:
   - "font-3270-nerd-font"
