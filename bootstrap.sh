@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/am3rb3ar/machine-setup.git"
-PLAYBOOK="machine-setup/local.yml"
+PLAYBOOK="local.yml"
 DRY_RUN=false
 
 usage() {
@@ -24,16 +24,26 @@ if ! command -v brew &>/dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-echo "Installing Ansible..."
-brew install ansible
+if ! command -v pipx &>/dev/null; then
+  echo "Installing pipx"
+  brew install pipx
+  pipx ensurepath
+fi
 
-echo "Installing Ansible collections..."
-ansible-galaxy collection install community.general
+if ! command -v ansible &>/dev/null; then
+  echo "Installing Ansible..."
+  pipx install --include-deps ansible
+fi
+
+if ! command -v ansible-galaxy &>/dev/null; then
+  echo "Installing Ansible collections..."
+  ansible-galaxy -vv collection install community.general
+fi
 
 if $DRY_RUN; then
   echo "Running ansible-pull (dry run)..."
-  ansible-pull --check --diff -U "$REPO_URL" "$PLAYBOOK"
+  ansible-pull -vv --check --diff -U "$REPO_URL" "$PLAYBOOK"
 else
   echo "Running ansible-pull..."
-  ansible-pull -U "$REPO_URL" "$PLAYBOOK"
+  ansible-pull -vv -U "$REPO_URL" "$PLAYBOOK"
 fi
