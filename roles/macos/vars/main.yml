@@ -69,6 +69,7 @@ homebrew_casks:
   - "1password-cli"
   - "aerospace"
   - "betterdisplay"
+  - "claude-code"
   - "ghostty"
   - "iterm2"
   - "kitty"
