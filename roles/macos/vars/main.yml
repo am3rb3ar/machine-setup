@@ -13,6 +13,7 @@ homebrew_packages:
   - "awscli"
   - "bash"
   - "bat"
+  - "btop"
   - "chezmoi"
   - "cloudsmith-cli"
   - "coreutils"
