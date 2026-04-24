@@ -78,6 +78,7 @@ homebrew_casks:
   - "iterm2"
   - "kitty"
   - "obsidian"
+  - "recangle"
 
 # Requires manual install + system extension approval in System Settings
 # brew install --cask karabiner-elements
