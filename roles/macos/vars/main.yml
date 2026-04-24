@@ -53,6 +53,7 @@ homebrew_packages:
   - "terraform"
   - "terraform-docs"
   - "tfswitch"
+  - "tree-sitter-cli"
   - "uv"
   - "volta"
   - "wget"
