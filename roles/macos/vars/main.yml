@@ -46,6 +46,7 @@ homebrew_packages:
   - "nushell"
   - "opencode"
   - "opentofu"
+  - "poppler"
   - "pre-commit"
   - "presenterm"
   - "pyenv"
