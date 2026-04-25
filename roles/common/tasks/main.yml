@@ -1,2 +1,12 @@
 ---
 # Cross-platform tasks go here
+
+- name: Check if Poetry is installed
+  ansible.builtin.stat:
+    path: "{{ ansible_env.HOME }}/.local/bin/poetry"
+  register: poetry_stat
+
+- name: Install Poetry
+  ansible.builtin.shell: |
+    curl -sSL https://install.python-poetry.org | python3 -
+  when: not poetry_stat.stat.exists
