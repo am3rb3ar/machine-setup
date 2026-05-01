@@ -8,6 +8,7 @@ homebrew_taps:
   - "anomalyco/tap"
   - "nikitabobko/tap"
   - "hashicorp/tap"
+  - "pulumi/tap"
 
 homebrew_packages:
   - "awscli"
@@ -50,6 +51,7 @@ homebrew_packages:
   - "poppler"
   - "pre-commit"
   - "presenterm"
+  - "pulumi"
   - "pyenv"
   - "rbenv"
   - "rclone"
